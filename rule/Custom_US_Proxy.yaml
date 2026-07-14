@@ -32,3 +32,6 @@ payload:
 
   # > bonify
   - DOMAIN-SUFFIX,bonify.de
+  # > HDHive
+  - DOMAIN-SUFFIX,hdhive.com
+  
