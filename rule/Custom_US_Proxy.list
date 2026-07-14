@@ -1,0 +1,32 @@
+# > American Express
+DOMAIN-SUFFIX,americanexpress.com,Finance
+DOMAIN-SUFFIX,amextravel.com,Finance
+DOMAIN-SUFFIX,membershiprewards.com,Finance
+DOMAIN-SUFFIX,aexp.com,Finance
+DOMAIN-SUFFIX,aexp-static.com,Finance
+
+# > Chase
+DOMAIN-SUFFIX,chase.com,Finance
+DOMAIN-SUFFIX,chasecdn.com,Finance
+DOMAIN-SUFFIX,chasepay.com,Finance
+DOMAIN-SUFFIX,jpmorganchase.com,Finance
+DOMAIN-SUFFIX,jpmorgan.com,Finance
+
+# > PayPal
+USER-AGENT,PayPal*,Finance
+DOMAIN-SUFFIX,paypal.com,Finance
+DOMAIN-SUFFIX,paypal.me,Finance
+DOMAIN-SUFFIX,paypal-mktg.com,Finance
+DOMAIN-SUFFIX,paypalobjects.com,Finance
+
+# > IBKR
+DOMAIN-SUFFIX,interactivebrokers.com,Finance
+DOMAIN-SUFFIX,ibkr.com,Finance
+DOMAIN-SUFFIX,ibllc.com,Finance
+
+# > N26
+DOMAIN-SUFFIX,n26.com,Finance
+DOMAIN-SUFFIX,tech26.de,Finance
+
+# > bonify
+DOMAIN-SUFFIX,bonify.de,Finance
