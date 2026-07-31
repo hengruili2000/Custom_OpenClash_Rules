@@ -19,6 +19,23 @@ function main(config) {
     throw new Error("源配置中未找到有效的 rules");
   }
 
+  if (!isObject(config["proxy-providers"])) {
+    throw new Error("源配置中未找到有效的 proxy-providers");
+  }
+
+  const proxyProviderName = "机场1";
+  const proxyProvider = config["proxy-providers"][proxyProviderName];
+
+  if (!isObject(proxyProvider)) {
+    throw new Error(`源配置中未找到 proxy-provider: ${proxyProviderName}`);
+  }
+
+  // 保留 Anchor_PR 展开的健康检查、过滤器和节点前缀，仅替换订阅地址。
+  config["proxy-providers"][proxyProviderName] = {
+    ...clone(proxyProvider),
+    url: "http://127.0.0.1:38324/download/AIO"
+  };
+
   const requiredGroups = ["美国手动", "Streaming"];
   const groupNames = new Set(
     config["proxy-groups"]
