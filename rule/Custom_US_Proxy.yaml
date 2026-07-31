@@ -23,8 +23,8 @@ payload:
   - DOMAIN-SUFFIX,schwabplan.com
 
   # > IBKR
-  - DOMAIN-KEYWORD,fidelity,Stocks
-  - DOMAIN-KEYWORD,thinkorswim,Stocks
+  - DOMAIN-KEYWORD,fidelity
+  - DOMAIN-KEYWORD,thinkorswim
 
   # > N26
   - DOMAIN-SUFFIX,n26.com
