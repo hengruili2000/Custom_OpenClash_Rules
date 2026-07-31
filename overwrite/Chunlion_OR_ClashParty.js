@@ -36,7 +36,33 @@ function main(config) {
     url: "http://127.0.0.1:38324/download/AIO"
   };
 
-  const requiredGroups = ["美国手动", "Streaming"];
+  if (!isObject(config.Anchor_OB)) {
+    throw new Error("源配置中未找到有效的 Anchor_OB");
+  }
+
+  const f1TvGroupName = "F1 TV";
+  const f1TvGroup = {
+    ...clone(config.Anchor_OB),
+    name: f1TvGroupName
+  };
+  const existingF1TvGroupIndex = config["proxy-groups"].findIndex(
+    (group) => group?.name === f1TvGroupName
+  );
+
+  if (existingF1TvGroupIndex === -1) {
+    const streamingGroupIndex = config["proxy-groups"].findIndex(
+      (group) => group?.name === "Streaming"
+    );
+    const insertIndex =
+      streamingGroupIndex === -1
+        ? config["proxy-groups"].length
+        : streamingGroupIndex + 1;
+    config["proxy-groups"].splice(insertIndex, 0, f1TvGroup);
+  } else {
+    config["proxy-groups"][existingF1TvGroupIndex] = f1TvGroup;
+  }
+
+  const requiredGroups = ["PayPal"];
   const groupNames = new Set(
     config["proxy-groups"]
       .map((group) => group?.name)
@@ -86,8 +112,8 @@ function main(config) {
   });
 
   const newRules = [
-    "RULE-SET,custom_us_proxy,美国手动",
-    "RULE-SET,f1_tv,Streaming"
+    "RULE-SET,custom_us_proxy,PayPal",
+    "RULE-SET,f1_tv,F1 TV"
   ];
 
   // 优先于通用国外规则；若源配置结构变化，则回退到 MATCH 前或末尾。
