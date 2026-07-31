@@ -1,0 +1,67 @@
+function main(config) {
+  const clone = (value) => JSON.parse(JSON.stringify(value));
+
+  if (!config.Anchor_CL) {
+    throw new Error("源配置中未找到 Anchor_CL");
+  }
+
+  config["rule-providers"] ??= {};
+  config.rules ??= [];
+
+  // 原 Anchor_CL 是 classical + text。
+  // 这两个远程文件使用 payload:，因此覆盖为 yaml。
+  const classicalYamlAnchor = {
+    ...clone(config.Anchor_CL),
+    format: "yaml"
+  };
+
+  // =========================================
+  // Rule Providers
+  // =========================================
+
+  config["rule-providers"]["custom_us_proxy"] = {
+    ...clone(classicalYamlAnchor),
+    url: "https://raw.githubusercontent.com/hengruili2000/Custom_OpenClash_Rules/refs/heads/main/rule/Custom_US_Proxy.yaml"
+  };
+
+  config["rule-providers"]["f1_tv"] = {
+    ...clone(classicalYamlAnchor),
+    url: "https://raw.githubusercontent.com/vxiaov/vClash/5294957bd48ff61e71938cfd1f68cfe2e44b8acb/clash/clash/ruleset/F1_TV"
+  };
+
+  // =========================================
+  // 对应 Rules
+  // 没有 RULE-SET 引用，provider 不会参与分流
+  // =========================================
+
+  const newRules = [
+    "RULE-SET,custom_us_proxy,美国手动",
+    "RULE-SET,f1_tv,Streaming"
+  ];
+
+  // 放到 geolocation-!cn 之前，确保优先于通用国外规则
+  let insertIndex = config.rules.findIndex(
+    (rule) => rule.startsWith("RULE-SET,geolocation-!cn,")
+  );
+
+  // 找不到 geolocation-!cn，就放到 MATCH 前
+  if (insertIndex === -1) {
+    insertIndex = config.rules.findIndex(
+      (rule) => rule.startsWith("MATCH,")
+    );
+  }
+
+  // 都不存在则添加到最后
+  if (insertIndex === -1) {
+    insertIndex = config.rules.length;
+  }
+
+  // 避免重复插入
+  const rulesToInsert = newRules.filter(
+    (rule) => !config.rules.includes(rule)
+  );
+
+  config.rules.splice(insertIndex, 0, ...rulesToInsert);
+
+  return config;
+}
