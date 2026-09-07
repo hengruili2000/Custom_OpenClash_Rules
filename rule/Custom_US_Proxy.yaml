@@ -35,4 +35,7 @@ payload:
   # > HDHive
   - DOMAIN-SUFFIX,hdhive.com
   - DOMAIN-SUFFIX,aptitude.pub
+
+  # > re0
+  - DOMAIN-SUFFIX,re0.me
   
