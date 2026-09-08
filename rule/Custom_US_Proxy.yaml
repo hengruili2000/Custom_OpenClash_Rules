@@ -1,4 +1,7 @@
 payload:
+  # > Alaska Airlines
+  - DOMAIN-SUFFIX,alaskaair.com
+
   # > American Express
   - DOMAIN-SUFFIX,americanexpress.com
   - DOMAIN-SUFFIX,amextravel.com
