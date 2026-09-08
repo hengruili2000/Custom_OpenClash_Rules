@@ -35,6 +35,10 @@ payload:
 
   # > bonify
   - DOMAIN-SUFFIX,bonify.de
+
+  # > CNBC Video
+  - DOMAIN-SUFFIX,cnbcawsmpvod.akamaized.net
+
   # > HDHive
   - DOMAIN-SUFFIX,hdhive.com
   - DOMAIN-SUFFIX,aptitude.pub
