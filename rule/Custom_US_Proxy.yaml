@@ -39,6 +39,13 @@ payload:
   # > CNBC Video
   - DOMAIN,cnbcawsmpvod.akamaized.net
 
+  # > App Services
+  - DOMAIN,api.lab.amplitude.com
+  - DOMAIN,sdk.iad-07.braze.com
+  - DOMAIN,sr-client-cfg.amplitude.com
+  - DOMAIN,zhqzvo.cdn-settings.appsflyersdk.com
+  - DOMAIN,zhqzvo.launches.appsflyersdk.com
+
   # > HDHive
   - DOMAIN-SUFFIX,hdhive.com
   - DOMAIN-SUFFIX,aptitude.pub
