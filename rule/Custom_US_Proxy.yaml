@@ -50,6 +50,9 @@ payload:
   - DOMAIN-SUFFIX,hdhive.com
   - DOMAIN-SUFFIX,aptitude.pub
 
+  # > PointsYeah
+  - DOMAIN-SUFFIX,pointsyeah.com
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
