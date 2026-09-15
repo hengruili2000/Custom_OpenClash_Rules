@@ -53,6 +53,9 @@ payload:
   # > PointsYeah
   - DOMAIN-SUFFIX,pointsyeah.com
 
+  # > Tinder
+  - DOMAIN-SUFFIX,gotinder.com
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
