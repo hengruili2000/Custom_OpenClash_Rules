@@ -39,6 +39,9 @@ payload:
   # > CNBC Video
   - DOMAIN,cnbcawsmpvod.akamaized.net
 
+  # > CME Group Tools
+  - DOMAIN,cmegroup-tools.quikstrike.net
+
   # > App Services
   - DOMAIN,api.lab.amplitude.com
   - DOMAIN,sdk.iad-07.braze.com
