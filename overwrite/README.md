@@ -13,18 +13,21 @@ https://raw.githubusercontent.com/hengruili2000/Custom_OpenClash_Rules/main/over
 
 该脚本会：
 
+- 设置 Clash/Mihomo 监听端口、控制器、运行模式、日志、IPv6 和延迟参数；
+- 合并设置流量嗅探、Android、Profile、Experimental 与 Fake-IP DNS 配置；
 - 将 `proxy-providers.机场1.url` 设置为本机 AIO 订阅地址
   `http://127.0.0.1:38324/download/AIO`；
 - 添加 `F1 TV` 策略组（继承 `Anchor_OB` 的可选策略）；
 - 添加 `custom_us_proxy` 规则集并分流至 `PayPal`；
 - 添加 `f1_tv` 规则集并分流至 `F1 TV`；
 - 将两条规则插入 `geolocation-!cn` 之前；
-- 继承源配置 `Anchor_CL` 的下载间隔和 `proxy` 设置。
+- 优先继承源配置 `Anchor_CL`；新版源配置没有该锚点时回退到 `Anchor_DN`，
+  保留下载间隔、大小限制和 `proxy` 设置。
 
-源配置必须包含 `proxy-providers.机场1`、`Anchor_CL`、`Anchor_OB`、`PayPal`、
-`rules` 和 `proxy-groups`。本机 `38324` 端口上的 AIO 服务必须在 Clash Party
-更新订阅时可用。脚本文件必须保留 `.js` 后缀，否则 Clash Party 会将其识别为
-YAML 覆写而不会执行 `main(config)`。
+源配置必须包含 `proxy-providers.机场1`、`Anchor_CL` 或 `Anchor_DN`、
+`Anchor_OB`、`PayPal`、`rules` 和 `proxy-groups`。本机 `38324` 端口上的 AIO
+服务必须在 Clash Party 更新订阅时可用。脚本文件必须保留 `.js` 后缀，否则
+Clash Party 会将其识别为 YAML 覆写而不会执行 `main(config)`。
 
 ## OpenClash 远程覆写归档
 
