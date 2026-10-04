@@ -59,6 +59,9 @@ payload:
   # > Tinder
   - DOMAIN-SUFFIX,gotinder.com
 
+  # > Tracker CDN
+  - DOMAIN-SUFFIX,trackercdn.com
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
