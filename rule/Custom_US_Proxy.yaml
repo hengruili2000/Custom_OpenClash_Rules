@@ -64,6 +64,10 @@ payload:
 
   # > Vivino
   - DOMAIN-SUFFIX,vivino.cc
+  - DOMAIN-SUFFIX,vivino.com
+  - DOMAIN,vivino.my.site.com
+  - DOMAIN,vivino.mysalesforce-scrt.com
+  - DOMAIN,vivino-us.attn.tv
 
   # > re0
   - DOMAIN-SUFFIX,re0.me
