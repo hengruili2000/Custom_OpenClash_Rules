@@ -72,6 +72,9 @@ payload:
   # > Cursor
   - DOMAIN-SUFFIX,cursorvm.com
 
+  # > University of Wisconsin
+  - DOMAIN-SUFFIX,wisc.edu
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
