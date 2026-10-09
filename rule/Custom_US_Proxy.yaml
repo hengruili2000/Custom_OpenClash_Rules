@@ -69,6 +69,9 @@ payload:
   - DOMAIN,vivino.mysalesforce-scrt.com
   - DOMAIN,vivino-us.attn.tv
 
+  # > Cursor
+  - DOMAIN-SUFFIX,cursorvm.com
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
