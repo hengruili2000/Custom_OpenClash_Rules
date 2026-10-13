@@ -61,6 +61,7 @@ payload:
 
   # > Tracker CDN
   - DOMAIN-SUFFIX,trackercdn.com
+  - DOMAIN-SUFFIX,tracker.gg
 
   # > Vivino
   - DOMAIN-SUFFIX,vivino.cc
