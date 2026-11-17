@@ -99,6 +99,9 @@ payload:
   # > Qichiyu
   - DOMAIN-SUFFIX,qichiyu.com
 
+  # > ltxlib
+  - DOMAIN,ltxlib.dpdns.org
+
   # > re0
   - DOMAIN-SUFFIX,re0.me
   
