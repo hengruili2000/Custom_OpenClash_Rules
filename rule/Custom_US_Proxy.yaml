@@ -76,6 +76,26 @@ payload:
   # > University of Wisconsin
   - DOMAIN-SUFFIX,wisc.edu
 
+  # > Apple Private Relay and Services
+  - DOMAIN,apple-relay.apple.com
+  - DOMAIN,apple-relay.cloudflare.com
+  - DOMAIN,apple-relay.fastly-edge.com
+  - DOMAIN,apple-relay.mask.apple-dns.net
+  - DOMAIN,apple-relay.akamaized.net
+  - DOMAIN-KEYWORD,apple-relay
+  - DOMAIN,apple-carry-relay.cloudflare.com
+  - DOMAIN,cp4.cloudflare.com
+  - DOMAIN,gateway.icloud.com
+  - DOMAIN,seed.siri.apple.com
+  - DOMAIN,api-siri-prod.apple.com
+  - DOMAIN,probe.icloud.com
+  - DOMAIN,metrics.icloud.com
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN,smoot.apple.com
+  - DOMAIN,mask-api.icloud.com
+  - DOMAIN,mask-api.fe2.apple-dns.net
+  - DOMAIN,gspe1-ssl.ls.apple.com
+
   # > Qichiyu
   - DOMAIN-SUFFIX,qichiyu.com
 
